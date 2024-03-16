@@ -2,7 +2,7 @@
 #include <fstream>
 using namespace std;
 
-int readFile(const string& filename)
+int writeFile(const string& filename)
 {
     ofstream outfile("C:\\Users\\jcoin\\Downloads\\Comsc 110\\quiz-6-1-question-2-TealSmurf\\employee.txt");
     
@@ -37,7 +37,7 @@ int readFile(const string& filename)
     return N;
 }
 
-void writeFile()
+int readFile()
 {
     ifstream ifs;
 

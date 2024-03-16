@@ -15,7 +15,7 @@ int writeFile(const string& filename)
     cout << "Enter the number of employees: ";
     cin >> N;
 
-    ofs.open("employee.txt");
+
     if (!ofs)
     {
         cout << "File Open Error\n";
@@ -47,7 +47,7 @@ int readFile(const string& filename)
     string eName, dName;
     double avg;
 
-    ifs.open("employee.txt");
+
     if (!ifs)
     {
         cout << "File Open Error\n";

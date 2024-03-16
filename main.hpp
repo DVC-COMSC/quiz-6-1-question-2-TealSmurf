@@ -2,40 +2,7 @@
 #include <fstream>
 using namespace std;
 
-int main()
-{
-    ifstream ifs;
-
-    cout << "ID         " << "Name      " << "Department    " << "Salary" << endl;
-
-    int N, id, s1, total;
-    string eName, dName;
-    double avg;
-
-    ifs.open("employee.txt");
-    if (!ifs)
-    {
-        cout << "File Open Error\n";
-        exit(0);
-    }
-
-    if(ifs)
-    {
-        ifs >> N;
-        for(int i = 0; i < N; i++)
-        {
-            ifs >> id >> eName >> dName >> s1;
-            cout << id << "     " << eName << "     " << dName << "         " << s1 << endl;
-            total += s1;
-        }
-    }
-    avg = total/N;
-    cout << "               Total: " << total << "  Average: " << avg;
-
-    ifs.close();
-}
-
-int main()
+int readFile(const string& filename)
 {
     ofstream outfile("C:\\Users\\jcoin\\Downloads\\Comsc 110\\quiz-6-1-question-2-TealSmurf\\employee.txt");
     
@@ -67,4 +34,38 @@ int main()
     }
 
     ofs.close();
+    return N;
+}
+
+void writeFile()
+{
+    ifstream ifs;
+
+    cout << "ID         " << "Name      " << "Department    " << "Salary" << endl;
+
+    int N, id, s1, total;
+    string eName, dName;
+    double avg;
+
+    ifs.open("employee.txt");
+    if (!ifs)
+    {
+        cout << "File Open Error\n";
+        exit(0);
+    }
+
+    if(ifs)
+    {
+        ifs >> N;
+        for(int i = 0; i < N; i++)
+        {
+            ifs >> id >> eName >> dName >> s1;
+            cout << id << "     " << eName << "     " << dName << "         " << s1 << endl;
+            total += s1;
+        }
+    }
+    avg = total/N;
+    cout << "               Total: " << total << "  Average: " << avg;
+
+    ifs.close();
 }

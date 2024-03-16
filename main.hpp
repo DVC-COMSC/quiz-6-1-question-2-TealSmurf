@@ -6,7 +6,7 @@ int writeFile(const string& filename)
 {
     ofstream outfile("C:\\Users\\jcoin\\Downloads\\Comsc 110\\quiz-6-1-question-2-TealSmurf\\employee.txt");
     
-    ofstream ofs;
+    ofstream ofs(filename);
 
     int N;
     int id, s1;
@@ -37,9 +37,9 @@ int writeFile(const string& filename)
     return N;
 }
 
-int readFile()
+int readFile(const string& filename)
 {
-    ifstream ifs;
+    ifstream ifs(filename);
 
     cout << "ID         " << "Name      " << "Department    " << "Salary" << endl;
 
@@ -68,4 +68,5 @@ int readFile()
     cout << "               Total: " << total << "  Average: " << avg;
 
     ifs.close();
+    return N;
 }
